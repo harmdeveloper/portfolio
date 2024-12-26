@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>Harm Fatima</title>
+</head>
+
+<style>
+ body {
+            background-color:white;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+        li{
+            margin: 12px;
+        }
+        .btn-custom:hover{
+            color:white ;
+        }
+
+        .navbar {
+            height: 12vh;
+            background-color: #800000;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px #4f0202;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        /* When the navbar is collapsed */
+        .navbar-collapse {
+            background-color: #800000;
+        }
+
+        /* White space issue fix */
+        .navbar-collapse.show {
+            background-color: #800000;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-section {
+            background-color: #800000;
+            width: 100%;
+            height: 118vh;
+        }
+        .btn{
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Ensure the navbar height does not leave white space when expanded */
+        @media (max-width: 992px) {
+            .header-section {
+                padding-top: 200px; /* Adjust padding so the content moves down correctly */
+            }
+        }
+
+        .about-section{
+        background-color: white;
+        color: #800000;
+        }
+        .title-s{
+            font-weight: bold;
+        }
+        .progress-bar{
+            background-color: #800000;
+        }
+      
+        .projects-section{
+            height: 220vh;
+            width: 100%;
+        background-color: #800000;
+        padding-top: 100px;
+    }
+    .project {
+        height: 53vh;
+        width: 100%;
+         display: flex;
+        flex-direction: column;
+}
+    .projects-section a{
+        color: white;
+        text-decoration: none;
+    }
+    .projects-section a:hover{
+        color:#3a0707;
+    }
+    .block{
+    width: 100%; 
+    height:30vh;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center; 
+    display: block;
+    }
+    .block:hover {
+  transform: scale(1.1);
+}
+.pjtext{
+    margin-top: 10px;
+  position: relative;
+}
+.contact-info .ico {
+  margin-bottom: 20px;
+}
+.contact-section{
+    padding-top: 100px;
+    background-color: white;
+    color: #800000;
+}
+.icon{
+    height: 20vh !important;
+    width:100% !important;
+    background-color: #b64a4a;
+    border-radius: 220px;
+    border: 5px solid #800000;
+}
+.icon:hover{
+    background-color: white;
+    border: 5px solid #800000;
+}
+
+.ico a{
+    color: #800000;
+}
+
+
+.footer{
+    height:15vh;
+    background-color: #800000;
+    padding-top: 50px;
+}
+.footer a{
+    color: white;
+}
+.footer a:hover{
+    font-weight: bold;
+}
+
+
+/* responsive ness above project  */
+
+        /* Laptop (1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        height: 10vh; /* Reduce navbar height */
+    }
+
+    .header-section {
+        height: 130vh; /* Adjust header height */
+        padding-top: 50px; /* Adjust padding for better positioning */
+    }
+
+    .header-section img {
+        width: 70%; /* Adjust image width */
+        height: 10vh; /* Adjust height for laptop view */
+    }
+
+    .header-section .text {
+        margin-top: 20%;
+        margin-left: 10%;
+    }
+
+    .about-section {
+        padding-top: 60px; /* Adjust top padding */
+    }
+
+    .about-img img {
+        height: 20vh; /* Adjust profile image size */
+    }
+
+    .about-info {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .progress-bar {
+        height: 20px; /* Make progress bars smaller */
+    }
+    .projects-section {
+        padding-top: 80px; /* Adjust for laptop screen */
+    }
+
+    .block {
+        height: 35vh; /* Adjust image height */
+    }
+
+    .pjtext {
+        margin-top: 15px;
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .project {
+        height: auto;
+    }
+    .contact-info .ico {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .contact-info .box {
+    padding: 30px;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+    .navbar {
+        height: 10vh; /* Reduce navbar height */
+    }
+
+    .header-section {
+        height: 130vh;
+        padding-top: 30px;
+    }
+
+    .header-section img {
+        width: 80%; /* Adjust image width for tablets */
+        height: 60vh;
+    }
+
+    .header-section .text {
+        margin-top: 30%;
+        margin-left: 5%;
+    }
+
+    .about-section {
+        padding-top: 30px; /* Adjust padding */
+    }
+
+    .about-img img {
+        height: 18vh; /* Adjust image size */
+    }
+
+    .about-info {
+        font-size: 12px; /* Adjust font size for tablet */
+    }
+
+    .progress-bar {
+        height: 18px;
+    }
+    .ab{
+        font-size: 13px;
+    }
+    .projects-section {
+        height: 290vh;
+        padding-top: 60px; /* Adjust for tablet screen */
+    }
+    .block {
+        height: 40vh; /* Adjust image height */
+    }
+
+    .pjtext {
+        margin-top: 20px;
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .project {
+        height: auto;
+        margin-bottom: 20px; /* Adjust margin */
+    }
+.heading-section{
+    padding-left: 15%;
+}
+    .projects-section .row {
+        display: block;
+    }
+    .contact-info .ico {
+        padding-left: 15%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contact-info .box {
+    padding: 25px;
+  }
+  .footer{
+    padding-bottom: 60px;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+/* Big Phone (750px) */
+@media (max-width: 750px) { 
+    body{
+        overflow-x: hidden;
+    }
+    .navbar {
+        height: 10vh;
+        width: 100%;
+    }
+
+    .header-section {
+        height: 85vh;
+        width: 107%;
+        padding-top: 20px;
+    }
+
+    .onimg{
+        width: 90% !important;
+        height: 65vh !important;
+    }
+
+    .header-section img {
+        width: 90% !important; /* Make the image bigger for smaller devices */
+        height: 60vh !important;;
+    }
+
+    .header-section .text  .name{
+        font-size: 40px !important;
+        font-weight:bold !important;
+        margin-top: 35%;
+    }
+
+    .about-section {
+       width: 102%;
+    }
+
+    .about-img img {
+        margin-top: -15%;
+        margin-left: 5%;
+        height: 15vh; /* Adjust profile image size */
+    }
+.about-info{
+    margin-top: 5% !important;
+}
+    .title-s {
+        margin-left: 5%;
+        font-size: 15px;
+
+    }
+    .skill-mf{
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+.progress{
+    height: 10px;
+    width:80%;
+}
+    .progress-bar {
+        height: 10px;
+    }
+    .ab{
+        font-size: 12px;
+        text-align: center;
+    }
+    .projects-section {
+        height:698vh;
+        width:108%;
+        padding-top: 50px; /* Adjust for big phone */
+    }
+
+    .block {
+        height: 45vh; /* Adjust image height */
+    }
+
+    .pjtext {
+        margin-top: 10px;
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .project {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .projects-section .row {
+        display: flex;
+        flex-direction: column; /* Stack projects vertically */
+        justify-content: center;
+    }
+    .contact-info { 
+    text-align: center;
+    padding-left: 5%;
+  }
+  .ico{
+    padding-left: 15%;
+  }
+  .icon{
+    height: 15vh !important;;
+    width: 50%;
+  }
+  .contact-info .box {
+    padding: 20px;
+  }
+  .footer{
+    width: 108% !important;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+/* Phone (320px) */
+@media (max-width: 320px) {
+    .navbar {
+        height: 10vh;
+        width: 100%;
+    }
+
+    .header-section {
+        height: 75vh;
+        width: 106%;
+        padding-top: 10px;
+    }
+
+    .header-section img {
+        width: 100%; /* Full-width image */
+        height: 50vh !important;
+    }
+    .onimg{
+        height: 50vh !important;
+    }
+.header-section .subheading{
+    display: none;
+}
+    .header-section .text .name{
+        margin-top: 35% !important;
+        margin-left: 5% !important;
+        font-size: 25px !important; /* Adjust text size for phone */
+    }
+
+    .about-section {
+        padding-top: 10px;
+    }
+
+    .about-img img {
+        height: 12vh; /* Adjust profile image size */
+    }
+.title-s{
+    font-size: 10px;
+}
+    .about-info {
+        font-size: 10px;
+    }
+.ab{
+    margin: 10px;
+    font-size: 10px;
+}
+    .progress-bar {
+        height: 12px; /* Smaller progress bars for small phones */
+    }
+    .projects-section {
+        height: 535vh;
+        width: 106%;
+        padding-top: 20px; /* Adjust for small phone */
+    }
+
+    .block {
+        height: 30vh; /* Adjust image height */
+        width: 100%;
+    }
+
+    .pjtext {
+        margin-top: 5px;
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .project {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .projects-section .row {
+        display: block; /* Stack projects vertically */
+    }
+    .contact-info .ico {
+    flex: 0 0 100%; /* Full width for each icon */
+    text-align: center;
+  }
+  .contact-info .box {
+    padding: 15px;
+  }
+  .footer p {
+    font-size: 10px;
+  }
+}
+
+
+</style>
+
+<body>
+    
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+     <a class="navbar-brand" href="#"><h3 style="font-weight: bold;font-family: 'Times New Roman';">Harm Fatima</h3></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+                 <a class="nav-link" href="#header-section" onclick="scrollToClass(event, 'header-section')">Home</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#about-section" onclick="scrollToClass(event, 'about-section')">About</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#projects-section" onclick="scrollToClass(event, 'projects-section')">Projects</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#contact-section" onclick="scrollToClass(event, 'contact-section')">Contact</a>
+             </li>
+         </ul>
+     </div>
+    </div>
+ </nav>
+
+<!-- Header Section -->
+<section class="header-section" id="header-section">
+    <div class="container">
+        <img style="width: 75%;height:100vh;position:absolute;border:10px solid #500505;margin-top: 100px; border-radius: 18px;" src="./pic bg.jpg" alt="">
+   <!-- oming opacity -->
+        <div style="width: 75%;height:100vh;z-index: auto;background-color:#800000;opacity:0.5;position:absolute;margin-top: 100px;" class="onimg"></div>
+<!-- text on image  -->
+        <div class="one-forth d-flex  align-items-center " data-scrollax=" properties: { translateY: '70%' }">
+            <div style="color:white; position: relative;margin-top: 25%;margin-left: 5%;line-height: 1.5;" class="text">
+                <span style="font-weight: bold;font-size:45px;" class="subheading">Hello!</span>
+              <h1 style="font-weight: 900;font-family: 'Times New Roman';font-size:50px;" class="name mb-4 mt-3">I'm <span>Harm Fatima</span></h1>
+              
+              <!-- Element to contain animated typing -->
+              <span style="font-weight:bold;font-size:35px;" id="typing-animation"></span>
+
+              <script>
+
+              // Initialize the typing animation
+              const typingAnimationElement = document.getElementById('typing-animation');
+
+              // Create an array of typing text
+              const typingTexts = [
+              'Web Developer  ',
+              'Logo Maker  ',
+              'UI/UX Designer  ',
+              'IT Student ',
+              ];
+
+              // Create a function to display the typing animation for a given text
+              function playTypingAnimation(text) {
+              // Loop through each character and add it to the element
+              for (let i = 0; i < text.length; i++) {
+                  setTimeout(() => {
+                  typingAnimationElement.textContent += text[i];
+                  }, i * 200); // Increase the delay to slow down the typing animation
+              }
+
+              // Once the animation is complete, reset the text and start over
+              setTimeout(() => {
+                  typingAnimationElement.textContent = '';
+                  playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+              }, text.length * 200);
+              }
+
+              // Start the typing animation loop
+              playTypingAnimation(typingTexts[0]);
+
+              </script>
+
+              <br>
+              <br>
+              <button style="background-color: transparent;border-radius: 8px;border: 4px solid white;"> <a href="#projects-section" onclick="scrollToClass(event, 'projects-section')" class="btn btn-custom">View Projects</a></button>
+          </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section  -->
+<section class="about-section" id="about-section">
+    <div style="padding-top: 90px;" class="container">
+        <div class="row">
+            <div class="row d-flex align-items-stretch">
+                <div class="col-md-6 col-lg-5 d-flex">
+                    <div class="img-about img d-flex align-items-stretch">
+                        <div class="overlay">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <!-- profile img  -->
+                                  <div class="about-img">
+                                    <img style="height: 25vh;border: 5px solid #800000;" src="https://avatars.mds.yandex.net/i?id=9f1880549045394a612250e47fbcc52b26b9d761-5254505-images-thumbs&n=13" class="img-fluid rounded b-shadow-a" alt="">
+                                  </div>
+                                </div>
+                                <!-- Details next to profile image -->
+                                <div class="col-sm-6 col-md-7">
+                                  <div class="about-info">
+                                    <p><span class="title-s"><b>Name: </b></span> <span>&nbsp;Harm Fatima</span></p>
+                                    <p><span class="title-s"><b>Job Role:</b> </span> <span>&nbsp;Web designer</span></p>
+                                    <p><span class="title-s"><b>Experience:</b> </span> <span>&nbsp;4 Months</span></p>
+                                    <p><span class="title-s"><b>Address:</b> </span> <span>&nbsp;House#10,street#22 Aziz colony shahdara ,Lahore</span></p>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <br>
+                              <!-- skils  -->
+                            <div class="skill-mf">
+                                <p class="title-s"><b>Skills:</b></p>
+                                <span>Front-end:</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0"
+                                        aria-valuemax="100">98%</div>
+                                </div>
+                                
+                                <span>Back-end:</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="85" aria-valuemin="0"
+                                        aria-valuemax="100">65%</div>
+                                </div>
+                                
+                                <span>web-designing:</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                                        aria-valuemax="100">90%</div>
+                                </div>
+                                
+                                <span>bootstrap:</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                                        aria-valuemax="100">85%</div>
+                                </div>
+                                
+                                <span>React:</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- about  -->
+                <div class="about col-md-6 col-lg-7 pl-lg-5 pb-5">
+                    <div class="row justify-content-start pb-3">
+                        <div class="col-md-12 heading-section ">
+                            
+                            <h2 class="title-s mb-4">About Me</h2>
+                            
+                            <p class="ab">With a strong foundation in web development and logo design, I embarked on this creative and technical journey to build immersive digital experiences. Combining front-end expertise with a flair for design, I have honed skills in building responsive websites, developing user-friendly interfaces, and crafting visually appealing logos. Passionate about bringing ideas to life, my journey has been a blend of coding precision and artistic expression, aiming to deliver impactful projects across both development and branding.</p>
+                            <ul class="about-info mt-4 px-md-0 px-2">
+                                <li class=" d-flex"><span class="title-s" ><b>Profile:</b></span> <span>&nbsp; web-designing &amp; logo Maker</span></li>
+                                <li class=" d-flex"><span class="title-s"><b>Domain:</b></span> <span>&nbsp; ICS &amp; Information technology</span></li>
+                                <li class=" d-flex"><span class="title-s"><b>Education:</b></span> <span>&nbsp; Bachelor of Information technology</span></li>
+                                <li class=" d-flex"><span class="title-s"><b>Language:</b></span> <span>&nbsp; English, Urdu ,Punjabi</span></li>
+                                <li class=" d-flex"><span class="title-s"><b>Other Skills:</b></span> <span>&nbsp; Good speaker, motivator , team player ,Good communication skills </span></li>
+                                <li class=" d-flex"><span class="title-s"><b>Interest:</b></span> <span>&nbsp; Art and crafting, web-designing &amp; logo making</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- project-section  -->
+<section class="projects-section" id="projects-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="heading-section col-md-7  text-center ">
+          <h1 class="big big-2"><b>Projects</b></h1>
+          <br>
+          <p>Below are the sample html, css, javascript, bootstrap, frontend projects.</p>
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div class=" project col-md-4 d-flex ">
+            <div class="blog-entry justify-content-end">
+            <a href="https://harmdeveloper.github.io/1-asg-1/" class="block" style="background-image: url('./asg1.PNG');">
+            </a>
+
+            <div class="pjtext mt-3 float-right d-block">
+              <h3 class="heading"><a href="https://harmdeveloper.github.io/1-asg-1/">Art website</a></h3>
+              <p>This project demonstrates how to work with margins, image alignment, and basic HTML form creation.</p>
+            </div>
+          </div>
+        </div>
+        <div class=" project col-md-4 d-flex ">
+            <div class="blog-entry justify-content-end">
+            <a href="https://harmdeveloper.github.io/2-asg-2/" class="block" style="background-image: url('./asg2.PNG');">
+            </a>
+            <div class="pjtext mt-3 float-right d-block">
+
+              <h3 class="heading"><a href="https://harmdeveloper.github.io/2-asg-2/">Gourmet catering </a></h3>
+              <p>Learn how to effectively use divs, CSS opacity, and the fundamentals of HTML and CSS in this website.</p>
+            </div>
+          </div>
+        </div>
+        <div class=" project col-md-4 d-flex ">
+            <div class="blog-entry">
+            <a href="https://harmdeveloper.github.io/3-pj-1/" class="block" style="background-image: url('./asg3.PNG');">
+            </a>
+            <div class="pjtext mt-3 float-right d-block">
+
+              <h3 class="heading"><a href="https://harmdeveloper.github.io/3-pj-1/">Techno animation website</a></h3>
+              <p>This website showcases how animations can enhance the visual appeal of a website.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  <br>
+
+  <div class="row d-flex">
+    <div class=" project col-md-4 d-flex ">
+        <div class="blog-entry justify-content-end">
+        <a href="https://harmdeveloper.github.io/4-boot/" class="block" style="background-image: url('./asg4.PNG');">
+        </a>
+        <div class="pjtext mt-3 float-right d-block">
+
+          <h3 class="heading"><a href="https://harmdeveloper.github.io/4-boot/">BR archotects</a></h3>
+          <p>Explore how to use Bootstrap effectively to build responsive, real-world websites.</p>
+        </div>
+      </div>
+    </div>
+    <div class=" project col-md-4 d-flex ">
+        <div class="blog-entry justify-content-end">
+        <a href="https://harmdeveloper.github.io/5-apple/" class="block" style="background-image: url('./asg5.PNG');">
+        </a>
+        <div class="pjtext mt-3 float-right d-block">
+
+          <h3 class="heading"><a href="https://harmdeveloper.github.io/5-apple/">Apple website </a></h3>
+          <p>This project demonstrates how to use the HTML video tag along with other essential HTML elements.</p>
+        </div>
+      </div>
+    </div>
+    <div class=" project col-md-4 d-flex ">
+        <div class="blog-entry justify-content-end">
+        <a href="https://harmdeveloper.github.io/6-pj2-decor/" class="block" style="background-image: url('./asg7.PNG');">
+        </a>
+        <div class="pjtext mt-3 float-right d-block">
+
+          <h3 class="heading"><a href="https://harmdeveloper.github.io/6-pj2-decor/">Decorvilla</a></h3>
+          <p>A creative 8-page website showcasing image adjustments, basic video usage, and HTML essentials.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<div class="row d-flex">
+    <div class=" project col-md-4 d-flex ">
+        <div class="blog-entry">
+        <a href="https://harmdeveloper.github.io/7-campus-pj3/" class="block" style="background-image: url('./asg6.PNG');">
+        </a>
+        <div class="pjtext mt-3 float-right d-block">
+
+          <h3 class="heading"><a href="https://harmdeveloper.github.io/7-campus-pj3/"> PGC portfolio website</a></h3>
+          <p>This portfolio site focuses on basic navigation and page linking using anchors and image links.</p>
+        </div>
+      </div>
+    </div>
+    <div class=" project col-md-4 d-flex ">
+        <div class="blog-entry justify-content-end">
+        <a href="https://harmdeveloper.github.io/8-pj04-constr/" class="block" style="background-image: url('./asg8.PNG');">
+        </a>
+        <div class="pjtext mt-3 float-right d-block">
+
+          <h3 class="heading"><a href="https://harmdeveloper.github.io/8-pj04-constr/">CECOM builders</a></h3>
+          <p>A construction website built using Java, HTML, CSS, and Bootstrap, highlighting modern web design practices.</p>
+        </div>
+      </div>
+    </div>
+    <div class=" project col-md-4 d-flex ">
+        <div class="blog-entry">
+        <a href="https://harmdeveloper.github.io/9-netflix/" class="block" style="background-image: url('./asg9.PNG');">
+        </a>
+        <div class="pjtext mt-3 float-right d-block">
+
+          <h3 class="heading"><a href="https://harmdeveloper.github.io/9-netflix/">Netflix clone</a></h3>
+          <p>This Netflix clone demonstrates form integration, local storage management, password authentication, and user creation features.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </section>
+
+  <!-- contact section  -->
+  <section class="contact-section" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+        <div class="data col-md-7 heading-section text-center ">
+          <h1 class="mb-4"><b>Contact Me</b></h1>
+          <p>Below are the details to reach out to me!</p>
+          <!-- <p>Feel free to contact me!</p> -->
+        </div>
+      </div>
+
+      <div class="contact-info row d-flex  mb-5">
+        <div class="ico col-md-6 col-lg-3 d-flex ">
+            <div class="box align-self-stretch  p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                   <a href="https://maps.app.goo.gl/RTHgPLoiJKZtKNGV6"><i class="fa-solid fa-signs-post" style="color:#800000;font-size:xx-large"></i></a>
+                </div>
+                <h3 class="m-4">Address</h3>
+              <p><a href="https://maps.app.goo.gl/RTHgPLoiJKZtKNGV6"> House # 10 &nbsp;street # 22 &nbsp; Aziz colony,Lahore</a></p>
+            </div> 
+        </div>
+        <div class="ico col-md-6 col-lg-3 d-flex ">
+            <div class="box align-self-stretch  p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <a href="tel:+923135484121"><i class="fa-solid fa-phone"style="color:#800000;font-size:xx-large"></i></a>
+                </div>
+                <h3 class="m-4">Contact</h3>
+              <p><a href="tel:+923135484121">+92 313 548 4121 </a></p>
+            </div>
+        </div>
+        <div class="ico col-md-6 col-lg-3 d-flex ">
+            <div class="box align-self-stretch  p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <a href="mailto:harmfatima046@gmail.com"><i class="fa-solid fa-paper-plane "style="color:#800000;font-size:xx-large"></i></a>
+                </div>
+                <h3 class="m-4">E-mail</h3>
+              <p><a href="mailto:harmfatima046@gmail.com">harmfatima046@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="ico col-md-6 col-lg-3 d-flex ">
+            <div class="box align-self-stretch  p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                 <a href="https://github.com/harmdeveloper"><i class="fa-brands fa-github"style="color:#800000;font-size: xx-large;" ></i></a> 
+                </div>
+                <h3 class="m-4">GitHub</h3>
+              <p><a href="https://github.com/harmdeveloper">harmdeveloper</a></p>
+            </div>
+        </div>
+ </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy;&nbsp; <script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a  href="https://github.com/harmdeveloper">Harm Fatima</a> &nbsp;<i class="fa-solid fa-heart"style="color:white;></i> </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Scroll Behavior Control -->
+<script>
+    // Prevent default anchor click behavior and scroll smoothly
+    function scrollToClass(event, className) {
+        event.preventDefault(); // Prevent the default anchor behavior
+
+        const element = document.querySelector(`#${className}`);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop,
+                behavior: 'smooth' // Smooth scroll
+            });
+        }
+    }
+</script>
+
+
+</body>
+</html>
